@@ -6,7 +6,7 @@ import { logger } from "./middleware/logger.ts";
 import { errorHandler } from "./middleware/error.ts";
 
 const app = new Application();
-const port = 8000;
+const port = parseInt(Deno.env.get("PORT") || "8000");
 
 // Middleware
 app.use(logger);

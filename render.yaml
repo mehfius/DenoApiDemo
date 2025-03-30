@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: deno-book-api
+    env: docker
+    buildCommand: ""
+    startCommand: ""
+    healthCheckPath: /api/books
+    envVars:
+      - key: PORT
+        value: 8000
